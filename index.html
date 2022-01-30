@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Weather Forcast</title>
+</head>
+<body>
+    <div class="site-wrap">
+        <div class="head-wrap">
+            <header>
+                <h1 class="site-title">DojoWeather</h1>
+                <nav class="main-nav">
+                    <a onclick="loadingAlert()" href="#">Burbank</a>
+                    <a onclick="loadingAlert()" href="#">Chicago</a>
+                    <a onclick="loadingAlert()" href="#">Dallas</a>
+                </nav>
+            </header>
+        </div>
+    </div>
+    <div class="main-wrap">
+        <div class="main">
+            <div class="city-info">
+                <h2 class="city-name">San Jose</h2>
+                <div class="units">
+                    <p>Show temperature in</p>
+                    <select onchange="convertUnits(this.value)" name="unit-selector" id="uni-selector">
+                        <option value="F">&ordm;F</option>
+                        <option value="C">&ordm;C</option>
+                    </select>
+                </div>
+            </div>
+            <div class="weather-feed">
+                <div class="days">
+                    <h3>Today</h3>
+                    <img src="assets/some_rain.png" alt="Rain">
+                    <p>Some Rain</p>
+                    <div class="temps">
+                        <h4 class="high"><span>75</span>&ordm;</h4>
+                        <h4 class="low"><span>65</span>&ordm;</h4>
+                    </div>
+                </div>
+                <div class="days">
+                    <h3>Tomorrow</h3>
+                    <img src="assets/some_sun.png" alt="Sun">
+                    <p>Some Sun</p>
+                    <div class="temps">
+                        <h4 class="high"><span>80</span>&ordm;</h4>
+                        <h4 class="low"><span>66</span>&ordm;</h4>
+                    </div>
+                </div>
+                <div class="days">
+                    <h3>Friday</h3>
+                    <img src="assets/some_clouds.png" alt="Clouds">
+                    <p>Some Clouds</p>
+                    <div class="temps">
+                        <h4 class="high"><span>69</span>&ordm;</h4>
+                        <h4 class="low"><span>61</span>&ordm;</h4>
+                    </div>
+                </div>
+                <div class="days">
+                    <h3>Saturday</h3>
+                    <img src="assets/some_sun.png" alt="Sun">
+                    <p>Some Sun</p>
+                    <div class="temps">
+                        <h4 class="high"><span>78</span>&ordm;</h4>
+                        <h4 class="low"><span>70</span>&ordm;</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="cookies" class="alert-wrap">
+        <div onclick="cookiesConfirmed()" class="cookie-alert">
+            <div class="alert-columns col-1">
+                <img src="assets/cookie.png" alt="Cookie">
+            </div>
+            <div class="alert-columns col-2">
+                <h3>Stop! Cookie Time</h3>
+                <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to analyze our traffic. <a href="#">Read more...</a></p>
+            </div>
+            <div class="alert-columns col-3">
+                <button class="cookie-btn">I Accept</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
